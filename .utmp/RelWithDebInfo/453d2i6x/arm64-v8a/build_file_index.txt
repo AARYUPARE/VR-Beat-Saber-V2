@@ -1,0 +1,2 @@
+C:\Game Engine Unity\World's Best Game Developer\VR-Beat-Saber-V2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Game Engine Unity\World's Best Game Developer\VR-Beat-Saber-V2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
