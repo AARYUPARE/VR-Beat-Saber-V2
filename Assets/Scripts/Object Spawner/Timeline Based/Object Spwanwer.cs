@@ -28,9 +28,23 @@ public class ObjectSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        if(setRandom) { ChangeObject(); }
+        if(setRandom) 
+        { 
+            selectedObject = Random.Range(0, spawningObjects.Count);
+        }
 
         Vector3 spawnPosition = GetSpawnPosition();
+
+        Instantiate(spawningObjects[selectedObject], spawnPosition, Quaternion.identity);
+    }
+
+    public void SpawnTwin()
+    {
+        Vector3 spawnPosition = new Vector3(lanes[0], height, forwardDistance);
+
+        Instantiate(spawningObjects[selectedObject], spawnPosition, Quaternion.identity);
+        
+        spawnPosition = new Vector3(lanes[1], height, forwardDistance);
 
         Instantiate(spawningObjects[selectedObject], spawnPosition, Quaternion.identity);
     }

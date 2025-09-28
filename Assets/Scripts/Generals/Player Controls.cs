@@ -1,21 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class PlayerControls : MonoBehaviour
 {
-    SongManager sm;
-
-    private void Awake()
-    {
-        sm = FindAnyObjectByType<SongManager>();
-    }
+    [SerializeField] TimelinePlayer timelinePlayer;
 
     public void OnPlay(InputValue value)
     {
+        if (!timelinePlayer) { return; }
+
         if (value.isPressed)
         {
-            sm.LoadSong(0);
-            sm.PlaySong();
+            timelinePlayer.PlaySongTimeline(0); 
         }
     }
 }
