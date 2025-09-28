@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SetVelocity : MonoBehaviour
+public class SetVelocity : MonoBehaviour, IDestroyable
 {
     [SerializeField] float speed;
     Rigidbody rb;
